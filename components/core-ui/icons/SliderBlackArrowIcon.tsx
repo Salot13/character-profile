@@ -1,4 +1,4 @@
-import { IconProps } from "../loader";
+import { IconProps } from "../../../types/coreUiTypes";
 
 export default function SliderBlackArrowIcon({
   width = 30,

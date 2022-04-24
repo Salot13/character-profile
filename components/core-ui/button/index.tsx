@@ -1,12 +1,5 @@
-import { createElement } from "react";
 import clsx from "clsx";
-
-export interface ButtonProps {
-  label: string;
-  className?: string;
-  type?: "button";
-  onClick?: (arg: React.MouseEvent<HTMLElement>) => void;
-}
+import { ButtonProps } from "../../../types/coreUiTypes";
 
 export const Button: React.FC<ButtonProps> = ({
   className = "",

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { LinkProps } from "../../../types/linkTypes";
+import { LinkProps } from "../../../types/coreUiTypes";
 import { ternaryConditions } from "../utils/ternaryConditions";
 
 export const Links = ({

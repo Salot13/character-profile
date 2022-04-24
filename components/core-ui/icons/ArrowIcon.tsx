@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { IconProps } from "../loader";
+import { IconProps } from "../../../types/coreUiTypes";
 
 export default function ArrowIcon({
   color,
