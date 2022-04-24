@@ -21,21 +21,21 @@ const Home: NextPage = () => {
     fromCharacterData: 20,
   });
   const {
-    data: allCharachter,
+    data: allCharacter,
     isLoading,
     isFetched,
   } = useGetAllCharacter(pagination);
 
   const characterData = useMemo(() => {
-    if (allCharachter && allCharachter.data) {
+    if (allCharacter && allCharacter.data) {
       const {
-        results: allCharachterData,
+        results: allCharactersData,
         info: paginationInfo,
-      }: CharacterResponseType = allCharachter && allCharachter.data;
+      }: CharacterResponseType = allCharacter && allCharacter.data;
       setPaginationInfo(paginationInfo);
-      return allCharachterData;
+      return allCharactersData;
     } else return [];
-  }, [allCharachter]);
+  }, [allCharacter]);
 
   const onPaginationNextButtonClick = () => {
     setPagination(pagination + 1);

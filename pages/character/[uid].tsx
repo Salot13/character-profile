@@ -1,28 +1,31 @@
+import { useMemo } from "react";
 import type { NextPage } from "next";
 import { useRouter } from "next/router";
-import { useMemo } from "react";
 import { Accordion } from "../../components/core-ui/accordion";
 import SliderBlackArrowIcon from "../../components/core-ui/icons/SliderBlackArrowIcon";
 import Loader from "../../components/core-ui/loader";
 import { MESSAGE, MOCK_IMAGES } from "../../components/core-ui/utils/constants";
 import { Image } from "../../components/image";
 import useGetCharacterInfo from "../../hooks/useGetCharacterInfo";
+import { CharacterCardResponseType } from "../../types/characterResponseType";
 
 const CharacterInfo: NextPage = () => {
   const router = useRouter();
   const { uid } = router.query;
   const {
-    data: charachterInfo,
+    data: charactersInfo,
     isLoading,
     isFetched,
   } = useGetCharacterInfo(uid as string);
 
   const characterData = useMemo(() => {
-    if (charachterInfo && charachterInfo.data) {
-      const allCharachterData: any = charachterInfo && charachterInfo.data;
-      return allCharachterData;
-    } else return [];
-  }, [charachterInfo]);
+    if (charactersInfo && charactersInfo.data) {
+      const allCharactersData: CharacterCardResponseType =
+        charactersInfo && charactersInfo.data;
+      return allCharactersData;
+    } else return undefined;
+  }, [charactersInfo]);
+
   return (
     <div className="w-full px-2 mb-6">
       {<Loader isLoading={isLoading} />}
@@ -71,11 +74,14 @@ const CharacterInfo: NextPage = () => {
             </div>
           </div>
           <div>
-            <Accordion title="Episodes List" content={characterData?.episode} />
+            <Accordion
+              title="Episodes List"
+              content={characterData?.episode || []}
+            />
           </div>
         </>
       )}
-      {!isLoading && isFetched && Object.keys(characterData).length === 0 && (
+      {!isLoading && isFetched && characterData === undefined && (
         <div className="h-32 flex flex-1 justify-center items-center order-1">
           {MESSAGE.data_not_available.dataTitle("Character information")}
         </div>

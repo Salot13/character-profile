@@ -1,8 +1,8 @@
 import { useQuery } from "react-query";
-import { getAllCharachter } from "../../data-shared/api";
+import { getAllCharacters } from "../../data-shared/api";
 
 export default function useGetAllCharacter(page: number) {
   return useQuery(["allCharacter", page], async () => {
-    return await getAllCharachter(page);
+    return await getAllCharacters(page);
   });
 }

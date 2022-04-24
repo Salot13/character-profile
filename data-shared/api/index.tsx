@@ -4,14 +4,17 @@ import {
   CHARCTER_GET_API_CALL,
   CHARCTER_INFO_GET_API_CALL,
 } from "../../components/core-ui/utils/constants";
-import { CharacterResponseType } from "../../types/characterResponseType";
+import {
+  CharacterCardResponseType,
+  CharacterResponseType,
+} from "../../types/characterResponseType";
 
-export const getAllCharachter = (page: number) =>
+export const getAllCharacters = (page: number) =>
   Axios.get<null, AxiosResponse<CharacterResponseType>>(
     CHARCTER_GET_API_CALL.CHARACTER_API(page)
   );
 
-export const getCharachterInfo = (id: string) =>
-  Axios.get<null, AxiosResponse<CharacterResponseType>>(
+export const getCharacterInfo = (id: string) =>
+  Axios.get<null, AxiosResponse<CharacterCardResponseType>>(
     CHARCTER_INFO_GET_API_CALL.CHARACTER_INFO_API(id)
   );

@@ -7,6 +7,7 @@ export interface CharacterCardResponseType {
   status: string;
   episode: Array<string>;
   location: { name: string; url: string };
+  origin?: { name: string };
 }
 
 export interface paginationType {
