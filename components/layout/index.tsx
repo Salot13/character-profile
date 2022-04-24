@@ -8,9 +8,9 @@ export interface LayoutProps {
 
 export const Layout = ({ children }: LayoutProps) => {
   return (
-    <div className="font-Montserrat">
+    <div className="flex flex-col h-screen font-Montserrat">
       <Header />
-      <main className="px-2 md:px-5 lg:px-32 pt-4 pb-8 lg:pb-8 md:pb-16">
+      <main className="mb-auto px-2 md:px-5 lg:px-32 pt-4 pb-8 lg:pb-8 md:pb-16">
         {children}
       </main>
       <Footer />

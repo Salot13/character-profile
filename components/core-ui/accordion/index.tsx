@@ -2,11 +2,7 @@ import { useRef, useState } from "react";
 import clsx from "clsx";
 import { ternaryConditions } from "../utils/ternaryConditions";
 import ArrowIcon from "../icons/ArrowIcon";
-
-export interface AccordionProps {
-  title: string;
-  content: Array<string>;
-}
+import { AccordionProps } from "../../../types/coreUiTypes";
 
 export function Accordion({ title, content }: AccordionProps) {
   const [active, setActive] = useState(false);

@@ -1,18 +1,9 @@
-export interface IconProps {
-  color?: string;
-  fillColor?: string;
-  rotateDegree?: number;
-  width?: number;
-  height?: number;
-  className?: string;
-  isActive?: boolean;
-  isLoading?: boolean;
-}
+import { IconProps } from "../../../types/coreUiTypes";
 
 export default function Loader({
   width = 120,
   height = 120,
-  className = "m-auto",
+  className = "m-auto mt-16",
   isLoading,
 }: IconProps) {
   return (

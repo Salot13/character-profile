@@ -80,7 +80,8 @@ const Home: NextPage = () => {
         {!isLoading && (
           <div className="justify-end">
             <Pagination
-              totalPages={paginationInfo?.count}
+              totalPages={60}
+              // totalPages={paginationInfo?.count}
               activePage={pagination}
               nextButtonClick={onPaginationNextButtonClick}
               prevButtonClick={onPaginationPrevButtonClick}
