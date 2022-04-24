@@ -11,7 +11,6 @@ export interface AccordionProps {
 export function Accordion({ title, content }: AccordionProps) {
   const [active, setActive] = useState(false);
   const contentSpace = useRef<any>(null);
-  console.log("contet", content);
   return (
     <>
       <div

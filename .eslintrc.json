@@ -1,3 +1,16 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": "next/core-web-vitals",
+  "root": true,
+  "rules": {
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/explicit-member-accessibility": "off",
+    "@typescript-eslint/no-use-before-define": "off",
+    "no-console": 2,
+    "no-duplicate-imports": 2,
+    "no-unreachable": 2,
+    "no-nested-ternary": 2,
+    "no-self-compare": 2,
+    "no-use-before-define": 2
+  }
 }

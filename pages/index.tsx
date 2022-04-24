@@ -1,9 +1,9 @@
 import { useMemo, useState } from "react";
 import type { NextPage } from "next";
-import CharacterCard from "../Component/core-ui/characterCard";
-import Loader from "../Component/core-ui/loader";
-import { MESSAGE } from "../Component/core-ui/utils/constants";
-import { Pagination } from "../Component/pagination";
+import CharacterCard from "../components/core-ui/characterCard";
+import Loader from "../components/core-ui/loader";
+import { MESSAGE } from "../components/core-ui/utils/constants";
+import { Pagination } from "../components/pagination";
 import useGetAllCharacter from "../hooks/useGetAllCharacter";
 import {
   CharacterResponseType,

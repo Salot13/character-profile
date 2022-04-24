@@ -1,11 +1,11 @@
 import type { NextPage } from "next";
 import { useRouter } from "next/router";
 import { useMemo } from "react";
-import { Accordion } from "../../Component/core-ui/accordion";
-import SliderBlackArrowIcon from "../../Component/core-ui/icons/SliderBlackArrowIcon";
-import Loader from "../../Component/core-ui/loader";
-import { MESSAGE, MOCK_IMAGES } from "../../Component/core-ui/utils/constants";
-import { Image } from "../../Component/image";
+import { Accordion } from "../../components/core-ui/accordion";
+import SliderBlackArrowIcon from "../../components/core-ui/icons/SliderBlackArrowIcon";
+import Loader from "../../components/core-ui/loader";
+import { MESSAGE, MOCK_IMAGES } from "../../components/core-ui/utils/constants";
+import { Image } from "../../components/image";
 import useGetCharacterInfo from "../../hooks/useGetCharacterInfo";
 
 const CharacterInfo: NextPage = () => {
@@ -23,7 +23,6 @@ const CharacterInfo: NextPage = () => {
       return allCharachterData;
     } else return [];
   }, [charachterInfo]);
-  console.log("characterINfo", characterData);
   return (
     <div className="w-full px-2 mb-6">
       {<Loader isLoading={isLoading} />}

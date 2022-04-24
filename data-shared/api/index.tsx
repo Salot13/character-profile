@@ -3,7 +3,7 @@ import { Axios } from "../axios";
 import {
   CHARCTER_GET_API_CALL,
   CHARCTER_INFO_GET_API_CALL,
-} from "../../Component/core-ui/utils/constants";
+} from "../../components/core-ui/utils/constants";
 import { CharacterResponseType } from "../../types/characterResponseType";
 
 export const getAllCharachter = (page: number) =>
