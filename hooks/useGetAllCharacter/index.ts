@@ -3,6 +3,6 @@ import { getAllCharacters } from "../../data-shared/api";
 
 export default function useGetAllCharacter(page: number) {
   return useQuery(["allCharacter", page], async () => {
-    return await getAllCharacters(page);
+    return getAllCharacters(page);
   });
 }
